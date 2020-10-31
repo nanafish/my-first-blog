@@ -76,8 +76,13 @@ WSGI_APPLICATION = 'djangogirld.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd',
+        'USER': 'd',
+        'PASSWORD':'ddd',
+        'HOST':'localhost',
+        'PORT':'5432',
+        
     }
 }
 
@@ -120,3 +125,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT=os.path.join(BASE_DIR,'static')
+LOGIN_REDIRECT_URL = '/'
+
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+MEDIA_URL='/media/'
