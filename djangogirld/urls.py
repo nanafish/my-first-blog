@@ -25,8 +25,8 @@ urlpatterns = [
     path('accounts/login/',views.LoginView.as_view(),name='login'),
     path('accounts/logout/',views.LogoutView.as_view(next_page='/'),name='logout'),
     path('',include('blog.urls')),
-    path('blog_images/',include('blog.urls'))
+    path('djangogirld_images/',include('blog.urls'))
 ]
 
 urlpatterns+=staticfiles_urlpatterns()
-urlpatterns+=static(settings.MEDIA_URL,media_root=settings.MEDIA_ROOT)
+urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
